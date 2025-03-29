@@ -1,0 +1,536 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #FFA500;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  .logoo{
+    height: 55px ;
+  }
+
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 1rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .nav-links .btn {
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #FFA500;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+  }
+  
+  .nav-links .btn:hover {
+    background: #333;
+    color: #fff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('c.png') no-repeat center center/cover;
+    opacity: 1;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+/* Features Page */
+.features-page {
+    padding: 2rem;
+    text-align: center;
+    background: #f9f9f9;
+
+  }
+  
+  .features-page h1 {
+    font-size: 2.5rem;
+    color: #FFA500;
+    margin-bottom: 1rem;
+  }
+  
+  .features-page p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+  } 
+  
+  .feature-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s, box-shadow 0.3s, ;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.8s;
+  }
+  
+  .feature-card img {
+    width: 100px;
+    margin: 0 auto 1rem;
+    display: block;
+  }
+  
+  .feature-card h2 {
+    font-size: 1.5rem;
+    color: #FFA500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+.button1 {
+  --stone-50: #ffffff;
+  --stone-800: #292524;
+  --yellow-400: #FFA500;
+
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  padding: 1px;
+  transform: translate(-4px, -4px);
+  outline: 2px solid transparent;
+  outline-offset: 5px;
+  border-radius: 9999px;
+  background-color: var(--stone-800);
+  color: var(--stone-800);
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+  text-align: center;
+  box-shadow:
+    0.5px 0.5px 0 0 var(--stone-800),
+    1px 1px 0 0 var(--stone-800),
+    1.5px 1.5px 0 0 var(--stone-800),
+    2px 2px 0 0 var(--stone-800),
+    2.5px 2.5px 0 0 var(--stone-800),
+    3px 3px 0 0 var(--stone-800),
+    0 0 0 2px var(--stone-50),
+    0.5px 0.5px 0 2px var(--stone-50),
+    1px 1px 0 2px var(--stone-50),
+    1.5px 1.5px 0 2px var(--stone-50),
+    2px 2px 0 2px var(--stone-50),
+    2.5px 2.5px 0 2px var(--stone-50),
+    3px 3px 0 2px var(--stone-50),
+    3.5px 3.5px 0 2px var(--stone-50),
+    4px 4px 0 2px var(--stone-50);
+
+  &:hover {
+    transform: translate(0, 0);
+    box-shadow: 0 0 0 2px var(--stone-50);
+  }
+
+  &:active,
+  &:focus-visible {
+    outline-color: var(--yellow-400);
+  }
+
+  &:focus-visible {
+    outline-style: dashed;
+  }
+
+  & > div {
+    position: relative;
+    pointer-events: none;
+    background-color: var(--yellow-400);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 9999px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      opacity: 0.5;
+      background-image: radial-gradient(
+          rgb(255 255 255 / 80%) 20%,
+          transparent 20%
+        ),
+        radial-gradient(rgb(255 255 255 / 100%) 20%, transparent 20%);
+      background-position:
+        0 0,
+        4px 4px;
+      background-size: 8px 8px;
+      mix-blend-mode: hard-light;
+      animation: dots 0.5s infinite linear;
+    }
+
+    & > span {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.25rem;
+      gap: 0.25rem;
+      filter: drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.25));
+
+      &:active {
+        transform: translateY(2px);
+      }
+    }
+  }
+}
+
+@keyframes dots {
+  0% {
+    background-position:
+      0 0,
+      4px 4px;
+  }
+  100% {
+    background-position:
+      8px 0,
+      12px 4px;
+  }
+}
+
+
+.button {
+  --black-700: hsla(0 0% 12% / 1);
+  --border_radius: 9999px;
+  --transtion: 0.3s ease-in-out;
+  --offset: 2px;
+
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  transform-origin: center;
+
+  padding: 1rem 2rem;
+  background-color: transparent;
+
+  border: none;
+  border-radius: var(--border_radius);
+  transform: scale(calc(1 + (var(--active, 0) * 0.1)));
+  
+  transition: transform var(--transtion);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: var(--black-700);
+
+  border-radius: var(--border_radius);
+  box-shadow: 
+  inset 0 0.5px hsl(0, 0%, 100%), inset 0 -1px 2px 0 hsl(0, 0%, 0%),
+    0px 4px 10px -4px hsla(0 0% 0% / calc(1 - var(--active, 0))),
+    0 0 0 calc(var(--active, 0) * 0.375rem) hsl(260 97% 50% / 0.75);
+  text-decoration: none;
+  transition: all var(--transtion);
+  z-index: 0;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 100%;
+  background-color: hsla(260 97% 61% / 0.75);
+  background-image: radial-gradient(
+      at 51% 89%,
+      hsla(266, 45%, 74%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 100% 100%, hsla(266, 36%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 22% 91%, hsla(266, 36%, 60%, 1) 0px, transparent 50%);
+  background-position: top;
+
+  opacity: var(--active, 0);
+  border-radius: var(--border_radius);
+  transition: opacity var(--transtion);
+  z-index: 2;
+}
+
+.button:is(:hover, :focus-visible) {
+  --active: 1;
+}
+.button:active {
+  transform: scale(1);
+}
+
+.button .dots_border {
+  --size_border: calc(100% + 2px);
+
+  overflow: hidden;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: var(--size_border);
+  height: var(--size_border);
+  background-color: transparent;
+
+  border-radius: var(--border_radius);
+  z-index: -10;
+}
+
+.button .dots_border::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: left;
+  transform: rotate(0deg);
+
+  width: 100%;
+  height: 2rem;
+  background-color: transparent; /* Change from white to transparent */
+
+  mask: none; /* Remove mask to prevent unwanted effects */
+  animation: none; /* Remove animation if not needed */
+}
+
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.button .sparkle {
+  position: relative;
+  z-index: 10;
+
+  width: 1.75rem;
+}
+
+.button .sparkle .path {
+  fill: currentColor;
+  stroke: currentColor;
+
+  transform-origin: center;
+
+  color: hsl(0, 0%, 100%);
+}
+
+.button:is(:hover, :focus) .sparkle .path {
+  animation: path 1.5s linear 0.5s infinite;
+}
+
+.button .sparkle .path:nth-child(1) {
+  --scale_path_1: 1.2;
+}
+.button .sparkle .path:nth-child(2) {
+  --scale_path_2: 1.2;
+}
+.button .sparkle .path:nth-child(3) {
+  --scale_path_3: 1.2;
+}
+
+@keyframes path {
+  0%,
+  34%,
+  71%,
+  100% {
+    transform: scale(1);
+  }
+  17% {
+    transform: scale(var(--scale_path_1, 1));
+  }
+  49% {
+    transform: scale(var(--scale_path_2, 1));
+  }
+  83% {
+    transform: scale(var(--scale_path_3, 1));
+  }
+}
+
+.button .text_button {
+  position: relative;
+  z-index: 10;
+
+  background-image: linear-gradient(
+    90deg,
+    hsla(0 0% 100% / 1) 0%,
+    hsla(0 0% 100% / var(--active, 0)) 120%
+  );
+  background-clip: text;
+
+  font-size: 1rem;
+  color: transparent;
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Aligns buttons at the same height */
+    gap: 20px; /* Adds spacing between buttons */
+    margin-top: 20px; /* Adds some spacing from the text above */
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 50%;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.content p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.content a {
+    color:white;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+.content a:hover {
+    text-decoration: none;
+}
+
+.help-btn {
+  padding: 1rem 2rem;
+  background: #FFA500;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.help-btn:hover {
+  background:#FFA500;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.image {
+    max-width: 40%;
+}
+
+.image img {
+    width: 100%;
+}
+
+  /* Footer */
+  footer {
+    background: #f7b731;
+    color: #030303;
+    text-align: center;
+    padding: 1rem;
+  }
+  .footer {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.footer div {
+    flex: 1;
+}
+  
+.footer div {
+  flex: 1;
+}
+.footer input {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+.footer button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #e76b1c;
+  color: white;
+  cursor: pointer;
+}

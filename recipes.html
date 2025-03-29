@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="recipes.css">
+    <script defer src="recipes.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="header">
+        <a href="home.html"><div class="logo"><img src="l.png" alt="" class="logoo"></div></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="AI.html">AI Generater</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <section id="recipes" class="recipes">
+            <h2 style="color: #FDF6E3; font-size:80px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Explore Recipes</h2>
+        </section>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search recipes...">
+        <div class="filter-container">
+            <label for="cuisine-filter">Filter by Cuisine:</label>
+            <select id="cuisine-filter">
+                <option value="">All Cuisines</option>
+                <option value="indian" selected>Indian</option>
+                <option value="italian">Italian</option>
+                <option value="chinese">Chinese</option>
+                <option value="mexican">Mexican</option>
+                <option value="thai">Thai</option>
+                <option value="french">French</option>
+                <option value="japanese">Japanese</option>
+                <option value="greek">Greek</option>
+                <!-- Add more cuisines as needed -->
+            </select>
+        </div>
+    </div><br>
+
+
+    <!-- Modal for Recipe Details -->
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title" class="modal-title"></h2>
+            <img id="modal-image" src="" alt="Recipe Image">
+            <h3>Ingredients:</h3>
+            <ul id="modal-ingredients"></ul>
+            <h3>Instructions:</h3>
+            <p id="modal-instructions"></p>
+        </div>
+    </div>
+    <div id="recipe-list" class="recipe-list"></div>
+
+    <footer>
+        <p>&copy; 2025 ChefMate | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

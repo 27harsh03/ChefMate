@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Mate - Your Recipe Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="AI.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-[#FAF3E0] min-h-screen">
+    
+    <!-- Navbar -->
+    <header class="header w-full absolute top-0 left-0">
+        <a href="home.html"><div class="logo"><img src="l.png" alt="" class="logoo"></div></a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#myplan" class="plan">My Plan</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="login.html" class="btn">Login</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="flex justify-center items-center min-h-screen pt-20">
+        <div class="bg-white/10 backdrop-blur-lg p-12 rounded-3xl shadow-2xl w-[90%] max-w-6xl text-center border border-white/20">
+    
+
+            
+            <!-- Search Section -->
+            <section id="search" class="search-section mb-10">
+                <h2 class="text-4xl font-semibold text-[#6B4226] mb-8">Search Recipes</h2>
+                <form id="search-form" class="flex flex-wrap justify-center gap-4">
+                    <input type="text" id="search-input" placeholder="Enter dish name..." required class="border border-[#FFA500]/50 p-3 w-64 text-center bg-transparent text-[#FFA500] rounded-lg outline-none" style="background-color: white;">
+                    <select id="cuisine-select" class="border border-[#6B4226]/50 p-3 bg-transparent text-[#6B4226] rounded-lg outline-none">
+                        <option value="" style="background-color: #FAF3E0;">All Cuisines</option>
+                        <option value="indian" style="background-color: #FAF3E0;">Indian</option>
+                        <option value="italian" style="background-color: #FAF3E0;">Italian</option>
+                        <option value="chinese" style="background-color: #FAF3E0;">Chinese</option>
+                    </select>
+                    <select id="dietary-select" class="border border-[#6B4226]/50 p-3 bg-transparent text-[#6B4226] rounded-lg outline-none">
+                        <option value="" style="background-color: #FAF3E0;">All Diets</option>
+                        <option value="glutenfree" style="background-color: #FAF3E0;">Gluten-Free</option>
+                        <option value="lactose" style="background-color: #FAF3E0;">Lactose Intolerant</option>
+                        <option value="vegan" style="background-color: #FAF3E0;">Vegan</option>
+                        <option value="vegetarian" style="background-color: #FAF3E0;">Vegetarian</option>
+                        <option value="nut" style="background-color: #FAF3E0;">Nut-Free</option>
+                        <option value="dairy" style="background-color: #FAF3E0;">Dairy-Free</option>
+                    </select>
+                    <select id="lifestyle-select" class="border border-[#6B4226]/50 p-3 bg-transparent text-[#6B4226] rounded-lg outline-none">
+                        <option value="" style="background-color: #FAF3E0;">All Goals</option>
+                        <option value="gym" style="background-color: #FAF3E0;">Gym (High Protein)</option>
+                        <option value="diet" style="background-color: #FAF3E0;">Diet (Low Calorie)</option>
+                        <option value="bulking" style="background-color: #FAF3E0;">Bulking (High Calorie)</option>
+                        <option value="keto" style="background-color: #FAF3E0;">Keto</option>
+                        <option value="paleo" style="background-color: #FAF3E0;">Paleo</option>
+                    </select> 
+                        <button class="button">
+                            <div><span>Search</span></div>
+                        </button>
+  
+                </form>
+                <div id="results" class="results-grid mt-6"></div>
+            </section>
+
+            <!-- AI Suggestions Section -->
+            <section id="ai-suggestions" class="ai-suggestions-section mb-10">
+                <h2 class="text-4xl font-semibold text-[#6B4226] mb-8">AI Recipe Suggestions</h2>
+                <form id="ingredient-form" class="flex flex-wrap justify-center gap-4">
+                    <input type="text" id="ingredient-input" placeholder="Enter ingredients (e.g., chicken, tomatoes)" required class="border border-[#FFA500]/50 p-3 w-64 text-center bg-transparent text-[#FFA500] rounded-lg outline-none" style="background-color: white;">
+                    <button class="button">
+                        <div><span>Suggest recipes</span></div>
+                    </button>
+                </form>
+                <div id="ai-results" class="results-grid mt-6"></div>
+            </section>
+
+            <!-- Weekly Meal Plan Section -->
+            <section id="weekly-plan" class="weekly-plan-section mb-10">
+                <h2 class="text-4xl font-semibold text-[#6B4226] mb-8">Your Weekly Meal Plan</h2>
+                <form id="weekly-plan-form" class="flex flex-wrap justify-center gap-4">
+                    <select id="weekly-dietary-select" class="border border-[#6B4226]/50 p-3 bg-transparent text-[#6B4226] rounded-lg outline-none">
+                        <option value="" style="background-color: #FAF3E0;">All Diets</option>
+                        <option value="glutenfree" style="background-color: #FAF3E0;">Gluten-Free</option>
+                        <option value="lactose" style="background-color: #FAF3E0;">Lactose Intolerant</option>
+                        <option value="vegan" style="background-color: #FAF3E0;">Vegan</option>
+                        <option value="vegetarian" style="background-color: #FAF3E0;">Vegetarian</option>
+                        <option value="nut" style="background-color: #FAF3E0;">Nut-Free</option>
+                        <option value="dairy" style="background-color: #FAF3E0;">Dairy-Free</option>
+                    </select>
+                    <select id="weekly-lifestyle-select" class="border border-[#6B4226]/50 p-3 bg-transparent text-[#6B4226] rounded-lg outline-none">
+                        <option value="" style="background-color: #FAF3E0;">All Goals</option>
+                        <option value="gym" style="background-color: #FAF3E0;">Gym (High Protein)</option>
+                        <option value="diet" style="background-color: #FAF3E0;">Diet (Low Calorie)</option>
+                        <option value="bulking" style="background-color: #FAF3E0;">Bulking (High Calorie)</option>
+                        <option value="keto" style="background-color: #FAF3E0;">Keto</option>
+                        <option value="paleo" style="background-color: #FAF3E0;">Paleo</option>
+                    </select>
+                    <button class="button">
+                        <div><span>Generate Weekly Plan</span></div>
+                    </button>
+                </form>
+                <div id="weekly-plan-results" class="mt-6"></div>
+            </section>
+
+            <!-- Popular Indian Dishes Section -->
+            <section id="popular-indian" class="popular-indian-section mb-10">
+                <h2 class="text-4xl font-semibold text-[#6B4226] mb-8">Popular Indian Dishes</h2>
+                <div id="popular-indian-list" class="results-grid"></div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Modal for Recipe Details -->
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content bg-white/10 backdrop-blur-lg p-10 rounded-3xl shadow-2xl border border-white/20 max-w-3xl">
+            <span class="close text-[#6B4226] text-3xl font-bold cursor-pointer">&times;</span>
+            <h2 id="modal-title" class="text-3xl font-semibold text-[#f7b731] mb-6"></h2>
+            <img id="modal-image" src="" alt="Recipe Image" class="w-full max-w-[300px] rounded-lg mx-auto mb-6">
+            <h3 class="text-2xl text-[#6B4226] mb-4">Ingredients:</h3>
+            <ul id="modal-ingredients" class="text-[#6B4226] mb-6"></ul>
+            <h3 class="text-2xl text-[#6B4226] mb-4">Instructions:</h3>
+            <p id="modal-instructions" class="text-[#6B4226]"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#f7b731] text-white text-center p-4 mt-10">
+        <p>&copy; 2023 Chef Mate. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
